@@ -31,24 +31,19 @@ function WordCard({ word }) {
   };
 
   return (
-    
-    <div
-      className="bg-gray-800 p-4 rounded-md shadow-md cursor-pointer text-white overflow-auto max-h-96"
-    > 
-    
-     <div className="WordName flex flex-row items-center justify-between">
+    <div className="bg-gray-800 p-4 rounded-md shadow-md cursor-pointer text-white overflow-auto max-h-96">
+      <div className="WordName flex flex-row items-center justify-between">
         <h3 className="self-start text-3xl font-bold mb-2">{word}</h3>
         <div className="flex self-end absolute relative">
           <button
-            className="text-blue-400 "
+            className="text-blue-400"
             onClick={() => playAudio(wordData?.phonetics[0]?.audio)}
           >
             🔉
           </button>
         </div>
-       
-     </div>
-     
+      </div>
+
       {showDetails && wordData ? (
         <>
           <div className="mt-4">
@@ -65,12 +60,11 @@ function WordCard({ word }) {
                       {definition.definition}
                     </p>
                     <div className="mt-2">
-                        <p className="text-gray-400">
-                          <span className="font-semibold">Example:</span>{" "}
-                          {definition.example}
-                        </p>
-                      </div>
-                   
+                      <p className="text-gray-400">
+                        <span className="font-semibold">Example:</span>{" "}
+                        {definition.example}
+                      </p>
+                    </div>
                     {/* Modern-looking line (partition) */}
                     {subIndex < 2 && (
                       <div className="border-t border-gray-600 mt-2" />
@@ -82,7 +76,12 @@ function WordCard({ word }) {
           </div>
         </>
       ) : (
-        <h1 className="text-gray-400" onClick={toggleDetails} >Click for meaning. 🔻</h1>
+        <button
+          className="text-gray-400 bg-gray-800 rounded-md p-2 mt-2 hover:bg-gray-700 transition duration-300"
+          onClick={toggleDetails}
+        >
+          Click for meaning🔻
+        </button>
       )}
     </div>
   );
