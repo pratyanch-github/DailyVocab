@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'; // Import your additional styles
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header/Header.jsx';
+import Footer from './components/Header/Footer.jsx';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div className="container mx-auto p-4">
         <Outlet />
       </div>
+      <Footer />
     </div>
   );
 }
