@@ -42,8 +42,8 @@ function WordCard({ word }) {
               >
                 🔉
               </button>
-            </div>)
-         {/* } */}
+            </div>
+         {/* )} */}
           
       </div>
 
