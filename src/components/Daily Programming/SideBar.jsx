@@ -6,7 +6,7 @@ function SideBar() {
   let data = useContext(DataContext);
 
   return (
-    <div className="bg-green-800 text-white p-4 rounded-md">
+    <div className="bg-green-800 w-[150px] text-white p-4 rounded-md">
       {data.data.quesList.map((ques, index) => (
         <div key={index + 1} className="mb-4">
           <Link

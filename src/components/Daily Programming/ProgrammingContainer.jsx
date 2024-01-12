@@ -7,15 +7,54 @@ function ProgrammingContainer() {
   // Write logic to call API and fetch data, store it in DataContext.
   let [data, setData] = useState({
     quesList: [
-      { name: "ques1", desc: "i am ques 1", sol: "i am ques1's sol" },
-      { name: "ques2", desc: "i am ques 2", sol: "i am ques2's sol" },
-      { name: "ques3", desc: "i am ques 3", sol: "i am ques3's sol" },
-      { name: "ques4", desc: "i am ques 4", sol: "i am ques4's sol" },
+      { 
+        name: "Two Sum", 
+        desc: "Given an array of integers, return indices of the two numbers such that they add up to a specific target.",
+        soltxt: "function twoSum(nums, target) {\n  // Implementation code here\n}", 
+        psuedoCode: "// Pseudo code here",
+        tags: ["array", "hash table"],
+        qid: "001",
+      },
+      { 
+        name: "Reverse Integer", 
+        desc: "Given a 32-bit signed integer, reverse digits of an integer.",
+        soltxt: "function reverseInteger(x) {\n  // Implementation code here\n}", 
+        psuedoCode: "// Pseudo code here",
+        tags: ["math"],
+        qid: "002",
+      },
+      { 
+        name: "Palindrome", 
+        desc: "Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.",
+        soltxt: "function isPalindrome(x) {\n  // Implementation code here\n}", 
+        psuedoCode: "// Pseudo code here",
+        tags: ["math"],
+        qid: "003",
+      },
+      { 
+        name: "Valid Parentheses", 
+        desc: "Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+        soltxt: "function isValid(s) {\n  // Implementation code here\n}", 
+        psuedoCode: "// Pseudo code here",
+        tags: ["stack"],
+        qid: "004",
+      },
     ],
   });
 
   useEffect(() => {
-    // Write the code to fetch the data from API and set data with setData.
+    // Simulating API call and setting data after a delay (mocking asynchronous behavior)
+    const fetchData = async () => {
+      // Simulate delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Set data
+      setData({
+        ...data,
+        quesList: [...data.quesList],
+      });
+    };
+
+    fetchData();
   }, []);
 
   return (
