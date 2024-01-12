@@ -56,7 +56,8 @@ function WordsContainer() {
           ))}
         </div>
       )}
-
+       
+       {/* Note text */}
       <div className="bg-blue-500 p-4 mt-8 rounded-md">
         <p className="text-white text-lg font-bold mb-2">Important Note</p>
         <p className="text-white">
