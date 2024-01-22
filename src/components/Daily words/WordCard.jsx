@@ -33,7 +33,7 @@ function WordCard({ word }) {
   return (
     <div className="bg-gray-800 p-4 rounded-md shadow-md cursor-pointer text-white overflow-auto max-h-96">
       <div className="WordName flex flex-row items-center justify-between">
-        <h3 className="self-start text-3xl font-bold mb-2">{word}</h3>     
+        <h3 className="self-start text-3xl font-bold mb-2" onClick={toggleDetails}>{word}</h3>     
          {wordData?.phonetics[0]?.audio && (<div className="flex self-end absolute relative">
               <button
                 className="text-blue-400"
@@ -74,6 +74,12 @@ function WordCard({ word }) {
               </div>
             ))}
           </div>
+          <button
+          className="text-gray-400 bg-gray-800 rounded-md p-2 mt-2 hover:bg-gray-700 transition duration-300"
+          onClick={toggleDetails}
+        >
+          Hide Meaning 🔺
+        </button>
         </>
       ) : (
         <button
